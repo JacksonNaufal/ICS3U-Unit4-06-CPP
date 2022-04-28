@@ -6,30 +6,18 @@
 
 #include <iostream>
 
-
-
 int main() {
-    // this function is a loop adder
-    std::string integerAsNumber;
-    int number;
-    int total = 1;
-    int loopNumber = 0;
-
-
-    // input
-    std::cout << "Enter your number!: ";
-    std::cin >> integerAsNumber;
-    std::cout << std::endl;
-
     // process & output
     try {
-        number = std::stoi(integerAsNumber);
-    do  {
-        loopNumber = loopNumber + 1;
-        total = total * loopNumber;
-     } while (loopNumber < number);
-        std::cout << "The sum of all the positive numbers from 1 to "
-        << number << " is " << total << std::endl;
+        for (int integerOne = 0; integerOne < 256; integerOne++) {
+            for (int integerTwo = 0; integerTwo < 256; integerTwo++) {
+                 for (int integerThree = 0; integerThree < 256;
+                    integerThree++) {
+                     std::cout << "RGB, " << integerOne << ", " << integerTwo
+                     << ", " << integerThree << std::endl;
+                }
+            }
+        }
     } catch (std::invalid_argument) {
         std::cout << "Invalid Input.";
     }
